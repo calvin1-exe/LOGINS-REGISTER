@@ -12,6 +12,24 @@
             "dest": "index.py"
         }
     ],
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.py"
+        },
+        {
+            "source": "/static/(.*)",
+            "destination": "/static/$1"
+        },
+        {
+            "source": "/auth/(.*)",
+            "destination": "/index.py"
+        },
+        {
+            "source": "/admin/(.*)",
+            "destination": "/index.py"
+        }
+    ],
     "env": {
         "FLASK_APP": "index.py",
         "FLASK_ENV": "production"

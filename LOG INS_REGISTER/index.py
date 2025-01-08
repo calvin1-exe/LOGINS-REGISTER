@@ -5,7 +5,7 @@ app = create_app()
 
 @app.route('/')
 def home():
-    return "Hello from Flask!"
+    return "Flask app is running!"
 
-# Vercel requires this
-app.debug = True 
+if __name__ == '__main__':
+    app.run() 
